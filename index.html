@@ -5,141 +5,132 @@
 <title>RONX ZM WEBSITE</title>
 
 <style>
-           
-.download-btn {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-           
-#contact a{
-color:yellow;
-font-size: 18px;
-text-decoration: none;
-}
-
-#contact a:hover{
-color:white;
-}
-
 /* BODY */
-
-body{
-background-image:url("background.jpg");
-background-size:cover;
-background-attachment:fixed;
-font-family:Arial;
-margin:0;
-color:white;
-text-align:center;
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial;
+    margin: 0;
+    color: white;
+    text-align: center;
 }
 
 /* HEADER */
-
-header{
-background:rgba(0,0,0,0.7);
-padding:20px;
+header {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
 }
 
 /* LOGO */
-
-.logo{
-width:120px;
-height:120px;
-border-radius:50%;
-display:block;
-margin:auto;
-border:4px solid white;
-
-animation: spin 5s linear infinite,
-           float 3s ease-in-out infinite,
-           glow 2s ease-in-out infinite;
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 4px solid white;
+    animation: spin 5s linear infinite,
+               float 3s ease-in-out infinite,
+               glow 2s ease-in-out infinite;
 }
 
 /* SPIN */
-
-@keyframes spin{
-from{transform:rotate(0deg);}
-to{transform:rotate(360deg);}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* FLOAT */
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 /* GLOW */
-
-@keyframes glow{
-0%{box-shadow:0 0 10px yellow;}
-50%{box-shadow:0 0 30px yellow;}
-100%{box-shadow:0 0 10px yellow;}
+@keyframes glow {
+    0% { box-shadow: 0 0 10px yellow; }
+    50% { box-shadow: 0 0 30px yellow; }
+    100% { box-shadow: 0 0 10px yellow; }
 }
 
 /* NAVIGATION */
-
-nav{
-background:black;
-padding:15px;
-position:sticky;
-top:0;
+nav {
+    background: black;
+    padding: 15px;
+    position: sticky;
+    top: 0;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-size:18px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
 }
 
-nav a:hover{
-color:yellow;
+nav a:hover {
+    color: yellow;
 }
 
 /* SECTIONS */
-
-section{
-padding:40px;
-background:rgba(0,0,0,0.6);
-margin:20px;
-border-radius:10px;
+section {
+    padding: 40px;
+    background: rgba(0,0,0,0.6);
+    margin: 20px;
+    border-radius: 10px;
 }
 
-h1{
-color:yellow;
-}
-
-h2{
-color:orange;
-}
+h1 { color: yellow; }
+h2 { color: orange; }
 
 /* MUSIC */
-
-.song{
-margin:3px;
+.song {
+    margin: 30px;
 }
 
-.song img{
-width:200px;
-border-radius:10px;
-border:3px solid white;
-margin-bottom:10px;
+.song img {
+    width: 200px;
+    border-radius: 10px;
+    border: 3px solid white;
+    margin-bottom: 10px;
 }
 
-audio{
-width:55%;
+audio {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.download-btn:hover {
+    color: yellow;
 }
 
 /* VIDEO */
+video {
+    margin-top: 20px;
+    border: 3px solid white;
+}
 
-video{
-margin-top:2px;
-border:3px solid green;
+/* CONTACT LINKS */
+#contact a {
+    color: yellow;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: white;
 }
 
 </style>
@@ -149,109 +140,87 @@ border:3px solid green;
 <body>
 
 <header>
-
-<img src="logo.png" class="logo">
-
-<h1>RONX ZM WEBSITE</h1>
-
+    <img src="logo.png" class="logo">
+    <h1>RONX ZM WEBSITE</h1>
 </header>
 
 <nav>
-
-<a href="#home">Home</a>
-<a href="#music">Music</a>
-<a href="#video">Video</a>
-<a href="#about">About</a>
-<a href="#Contact">Contact<a/>
-
+    <a href="#home">Home</a>
+    <a href="#music">Music</a>
+    <a href="#video">Video</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <section id="home">
-
-<h2>Welcome</h2>
-
-<p>Welcome to my official music website where I post my songs and videos.</p>
-
+    <h2>Welcome</h2>
+    <p>Welcome to my official music website where I post my songs and videos.</p>
 </section>
 
 <section id="music">
+    <h2>My Music</h2>
 
-<h2>My songs</h2>
+    <div class="song">
+        <img src="cover1.jpg">
+        <p>Song 1</p>
+        <audio controls>
+            <source src="ugly.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <a href="ugly.mp3" download="ugly.mp3">
+            <button class="download-btn">Download Song</button>
+        </a>
+    </div>
 
-<div class="song">
-
-<img src="cover 1.png">
-
-<p>RONX ZM UGLY</p>
-
-<audio controls>
-<source src="ugly.mp3" type="audio/mpeg">
-</audio>
-
-</div>
-
-<div class="song">
-
-<img src="cover 2.png">
-
-<p>RONX ZM HARDWORK</p>
-
-<audio controls>
-<source src="hardwork.mp3" type="audio/mpeg">
-</audio>
-
-</div>
-
-<div class="song">
-
-<img src="Cover 3.png">
-
-<p>RONX ZM</p>
-
-<audio controls>
-<source src="nalikutemwa.mp3" type="audio/mpeg">
-</audio>
-
-</div>
+    <div class="song">
+        <img src="cover2.jpg">
+        <p>Song 2</p>
+        <audio controls>
+            <source src="hardwork.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <a href="hardwork.mp3" download="hardwork.mp3">
+            <button class="download-btn">Download Song</button>
+        </a>
+    </div>
 
 </section>
 
 <section id="video">
+    <h2>My Video</h2>
 
-<h2>My Video</h2>
+    <!-- Embedded YouTube video -->
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
 
-<video width="400" controls>
-<source src="black.mp4" type="video/mp4">
-</video>
+    <p>Or <a href="https://www.youtube.com/@RONXZM" target="_blank">
+        visit my YouTube channel
+    </a></p>
 
 </section>
 
 <section id="about">
-
-<h2>About Me</h2>
-
-<p>I am RONX ZM. I am learning web development and building my own music website.</p>
+    <h2>About Me</h2>
+    <p>I am RONX ZM. I am learning web development and building my own music website.</p>
+</section>
 
 <section id="contact">
-
-<h2>contact Me</h2>
-
-<p>phone:+260772016390</p>
-
-<p>email: mumbamaron3@gmail.com</p>
-
-<p>follow me on social media:</p>
-
-<p>
-<a href="ronx zm"<a/>
-</p>
-
-<p>
-<a href="ronx zm"</a>
-
+    <h2>Contact Me</h2>
+    <p>Email: mumbamaron3@email.com</p>
+    <p>Phone: +260 772016390</p>
+    <p>Follow me on social media:</p>
+    <p>
+        <a href="https://www.facebook.com/maron.mumba.73">Facebook</a>
+    </p>
+    <p>
+        <a href="https://www.youtube.com/@RONXZM">YouTube Channel</a>
+    </p>
 </section>
 
 </body>
-
 </html>
-
