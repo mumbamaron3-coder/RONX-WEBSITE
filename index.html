@@ -91,10 +91,21 @@ h2 { color: orange; }
 }
 
 .song img {
-    width: 200px;
-    border-radius: 10px;
-    border: 3px solid white;
-    margin-bottom: 10px;
+ width:120px;
+height:120px;
+border-radius:50%;
+display:block;
+margin:auto;
+border:4px solid green;
+
+/* spinning animation */
+animation:spin 9s linear infinite;
+}
+
+/* keyframes for the spinning motion */
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
 }
 
 audio {
